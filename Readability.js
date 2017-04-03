@@ -28,7 +28,9 @@
  */
 function Readability(uri, doc, options) {
   options = options || {};
-
+  const Node = {
+    ELEMENT_NODE: 1
+  };
   this._uri = uri;
   this._doc = doc;
   this._biggestFrame = false;
@@ -2086,6 +2088,7 @@ Readability.prototype = {
       textContent: textContent,
       length: textContent.length,
       excerpt: metadata.excerpt,
+      article: articleContent
     };
   }
 };
