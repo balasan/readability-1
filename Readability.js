@@ -26,11 +26,14 @@
  * @param {HTMLDocument} doc     The document to parse.
  * @param {Object}       options The options object.
  */
+
+const Node = {
+  ELEMENT_NODE: 1
+};
+
 function Readability(uri, doc, options) {
   options = options || {};
-  const Node = {
-    ELEMENT_NODE: 1
-  };
+
   this._uri = uri;
   this._doc = doc;
   this._biggestFrame = false;
